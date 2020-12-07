@@ -7,7 +7,41 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   </head>
   <body>
+
+    <!-- #9 refs -->
     <div id="vue-app">
+      <h2>Refs</h2>
+      <input type="text" ref="input">
+      <button v-on:click="readRefs">Submit</button>
+      <p>Your fav food: {{output}}</p>
+      <div ref='test'>Hello</div>
+    </div>
+
+    <!-- #8 vue component -->
+      <!-- <h1>Component</h1>
+      <div id="vue-app-one">
+        <h2>Vue App One</h2>
+        <greeting></greeting>
+      </div>
+
+      <div id="vue-app-two">
+        <h2>Vue App Two</h2>
+        <greeting></greeting>
+      </div> -->
+    <!-- #7 multiple vue instances -->
+      <!-- <h1>Multiple Vue Instances</h1>
+      <div id="vue-app-one">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+      </div>
+
+      <div id="vue-app-two">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+        <button v-on:click="changeTitle">Change App One Title</button>
+      </div> -->
+
+    <!-- <div id="vue-app"> -->
       <!-- #1 data, methods and data binding -->
         <!-- <h1>{{greet('night')}}</h1>
         <p>{{name}}</p>
@@ -96,17 +130,19 @@
 
       <!-- Punchbag Project -->
       <!-- bag image -->
-        <div id="bag" v-bind:class='{burst: ended}'></div>
+        <!-- <div id="bag" v-bind:class='{burst: ended}'></div> -->
       <!-- bag health -->
-        <div id="bag-health">
+        <!-- <div id="bag-health">
           <div v-bind:style="{width: health+'%'}"></div>
-        </div>
+        </div> -->
       <!-- game controls -->
-        <div id="controls">
+        <!-- <div id="controls">
           <button v-on:click='punch' v-show='!ended'>Punch</button>
           <button v-on:click='restart'>Restart</button>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
+
+
     <script src="app.js"></script>
   </body>
 </html>
