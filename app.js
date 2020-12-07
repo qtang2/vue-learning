@@ -5,12 +5,22 @@ new Vue({
     // job:"Learning",
     // website:"https://unpkg.com/vue",
     // websiteTag:'<a href="https://unpkg.com/vue">Vue</a>'
-    name:'',
-    age:20,
-    a:0,
-    b:0
+    // name:'',
+    // age:20,
+    // a:0,
+    // b:0
     // x:0,
     // y:0
+    // available:false,
+    // nearby:false
+    // error:false,
+    // success:false
+    characters:['Mario','Luigi','Yoshi','Browser'],
+    ninjas:[
+      {name:'Ryu',age:25},
+      {name:'Yoshi',age:35},
+      {name:'Ken',age:55},
+    ]
   },
   methods:{
     // greet: function(time){
@@ -43,14 +53,20 @@ new Vue({
 
   },
   computed:{
-    addToA:function(){
-      console.log('AAAA')
-      return this.a + this.age
-    },
-
-    addToB:function(){
-      console.log('BBB')
-      return this.b + this.age
+    // addToA:function(){
+    //   console.log('AAAA')
+    //   return this.a + this.age
+    // },
+    //
+    // addToB:function(){
+    //   console.log('BBB')
+    //   return this.b + this.age
+    // }
+    compClasses:function(){
+      return {
+        nearby: this.nearby,
+        available: this.available
+      }
     }
   }
 //TODO: check greet method

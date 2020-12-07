@@ -7,3 +7,21 @@
   text-align: center;
   border: 1px solid #333;
 }
+
+span{
+  background: red;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* if we have avaibable class then set the span class attribute */
+.available span{
+  background: green;
+}
+
+.nearby span:after{
+  content:"nearby";
+  margin-left: 10px
+}
