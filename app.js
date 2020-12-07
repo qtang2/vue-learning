@@ -15,12 +15,14 @@ new Vue({
     // nearby:false
     // error:false,
     // success:false
-    characters:['Mario','Luigi','Yoshi','Browser'],
-    ninjas:[
-      {name:'Ryu',age:25},
-      {name:'Yoshi',age:35},
-      {name:'Ken',age:55},
-    ]
+    // characters:['Mario','Luigi','Yoshi','Browser'],
+    // ninjas:[
+    //   {name:'Ryu',age:25},
+    //   {name:'Yoshi',age:35},
+    //   {name:'Ken',age:55},
+    // ]
+    health: 100,
+    ended:false
   },
   methods:{
     // greet: function(time){
@@ -51,7 +53,20 @@ new Vue({
     //   return this.b + this.age
     // }
 
+    punch:function(){
+      this.health -=10
+      if(this.health<=0){
+        this.ended = true
+      }
+    },
+    restart: function(){
+      this.health= 100;
+      this.ended = false
+    }
+
+
   },
+
   computed:{
     // addToA:function(){
     //   console.log('AAAA')
@@ -62,12 +77,12 @@ new Vue({
     //   console.log('BBB')
     //   return this.b + this.age
     // }
-    compClasses:function(){
-      return {
-        nearby: this.nearby,
-        available: this.available
-      }
-    }
+    // compClasses:function(){
+    //   return {
+    //     nearby: this.nearby,
+    //     available: this.available
+    //   }
+    // }
   }
 //TODO: check greet method
 })
